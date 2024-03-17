@@ -132,7 +132,19 @@ Basically, SAP BTP allows to connect the global account to your provider account
 
 3.  Boosters
 
+"boosters" typically refer to packages or offerings that provide additional capabilities or resources to users or organizations using the platform. These boosters are designed to enhance the functionality, performance, or scalability of applications and solutions developed on SAP BTP. Boosters may include a combination of tools, services, and resources aimed at accelerating development, improving user experiences, or enabling new use cases.
+
+The specific features and components included in a booster package can vary depending on the needs of the organization and the nature of the application being developed. 
+
+![alt text](./Images/BTP%20Boosters.png)
+
+
+BTP Boosters enable to quickly add associated services and subscriptions in one click to the account.
+
+
 4.  System Landscape 
+
+This provides an overview of the 
 
 5.  Entitlements 
 In SAP BTP (Business Technology Platform), "entitlements" refer to the permissions or rights granted to users or entities to access and use specific resources or services within the platform. These entitlements define what actions users are allowed to perform, what resources they can access, and under what conditions.
@@ -151,18 +163,99 @@ Entitlements in SAP BTP can vary depending on the type of service or resource be
 
 Entitlement management in SAP BTP is typically handled through the SAP BTP cockpit or administration console, where administrators can assign, modify, or revoke entitlements based on the organization's needs and policies. Effective entitlement management is crucial for ensuring proper access control, compliance with regulations, and efficient utilization of resources within SAP BTP.
 
-
 6.  Usage Analytics
 
-
-### Directory & Subaccount, Entitlements, Boosters
+This shows the detailed usage analytics of the different sub accounts 
 
 ## Explore SAP BTP Subaccount
+
+#### Overview
+General Information, Cloud Foundry Environment
+
+#### Cloud Foundry
+In the context of SAP BTP (Business Technology Platform), Cloud Foundry refers to one of the runtime environments available for deploying and managing applications. SAP BTP supports multiple runtime environments, including Cloud Foundry and Neo.
+
+Cloud Foundry within SAP BTP provides developers with a platform-as-a-service (PaaS) environment where they can build, deploy, and manage applications using a variety of programming languages and frameworks. It abstracts away infrastructure complexities and automates many aspects of application lifecycle management, such as scaling, monitoring, and logging.
+
+Key features of Cloud Foundry within SAP BTP include:
+
+1. **Polyglot Support**: Developers can use a wide range of programming languages and frameworks, including Java, Node.js, Python, Ruby, and more.
+
+2. **Buildpacks**: Cloud Foundry uses buildpacks to detect, configure, and run applications. Buildpacks simplify the deployment process by providing a consistent way to package and deploy applications, regardless of the underlying technology stack.
+
+3. **Container-based Architecture**: Applications deployed on Cloud Foundry within SAP BTP run in containers, providing a lightweight and portable runtime environment. This ensures consistency across different cloud environments and infrastructure providers.
+
+4. **Self-Service Deployment**: Developers can deploy applications to Cloud Foundry within SAP BTP using a self-service model, without needing assistance from operations teams. This enables faster deployment cycles and greater agility in the development process.
+
+5. **Scaling and High Availability**: Cloud Foundry within SAP BTP supports automatic scaling and high availability features, allowing applications to scale dynamically based on demand and ensuring continuous availability even in the event of failures.
+
+6. **Service Marketplace**: Developers can access a marketplace of services within SAP BTP, including databases, messaging services, and more, which can be easily integrated with their Cloud Foundry applications.
+
+Overall, Cloud Foundry within SAP BTP provides developers with a flexible and scalable platform for building and deploying cloud-native applications, helping organizations accelerate their digital transformation initiatives and drive innovation.
+
+#### Kyma Environment
+Kyma environment is a functionality provided by the SAP BTP. It's basically a fully managed cloud native Kubernetes application runtime based on the open source  project called Kyma. It's basically provide the capability to simplify the development and to run enterprise grade cloud native applications.
+
+It also provides the functionality of serverless functions and much more.
+
+#### Spaces in SubAccount 
+In the context of a trial account in SAP BTP (Business Technology Platform), a "space" refers to a logical environment where applications, services, and related resources are organized and managed. When you sign up for a trial account or a paid subscription on SAP BTP, you are provided with a dedicated space where you can develop, deploy, and operate your applications.
+
+Spaces in SAP BTP serve several purposes:
+
+1. **Isolation**: Each space provides a level of isolation for resources and applications. This means that resources deployed in one space are logically separated from resources in other spaces, allowing for better organization and management.
+
+2. **Collaboration**: Spaces enable collaboration among team members working on different projects or applications. You can invite other users to join your space, allowing them to contribute to development efforts or access resources as needed.
+
+3. **Resource Management**: Spaces help you manage resources more effectively by providing a dedicated environment for deploying and monitoring applications. You can allocate resources such as memory, storage, and computing power to specific spaces based on the needs of your applications.
+
+4. **Deployment Environment**: Each space serves as a deployment environment for applications developed on SAP BTP. You can deploy multiple applications within a single space, each with its own set of services and dependencies.
+
+5. **Development Lifecycle**: Spaces support the development lifecycle by providing separate environments for development, testing, and production. You can deploy and test changes in a development space before promoting them to a production space to ensure stability and reliability.
+
+Overall, spaces in SAP BTP help streamline the development and deployment of applications by providing a structured and isolated environment for managing resources and collaborating with team members. Whether you're building a small prototype or a complex enterprise application, spaces provide the flexibility and scalability you need to succeed in your development efforts.
+
+#### Services - Service Marketplace, Instances & Subscriptions
+
+The first option that we have is this service marketplace.
+So this is basically a collection of services and it will hold all the services that are available for this sub account.
+
+Services are basically the functionalities. So let's say you have an application where you want to run some background jobs. In ABAP we use we do SM36 / SM37 to create a background job and to manage them. But here in SAP BTP we don't have those options. So what we have.
+We have services for those things.
+So let's say for job scheduling, we have this job scheduling service.
+
+If you go inside it, you can see the detail set.
+
+A job scheduling service allows you to define and manage jobs that runs once or recurring schedules.
+
+![alt text](./Images/Service%20MarketPlace.png)
+
+Job Scheduling Services
+
+![alt text](./Images/Job-Schedule.png)
+
+Cloud Foundry
+- Spaces, Quota Plans, Org Members
+
+# CONTINUE HERE
+HTML5 Applications
+
+Connectivity
+- Destinations, Cloud Connectors
+
+Security
+- Users, Roles, Role Collections & Trust Configuration 
+
+Entitlements
+
 ### Service Instances & Subscriptions, Service Marketplace
+
 ### Role Collections, Roles, Users, Destinations, Cloud Connectors
+
 ### CF Spaces & Quota Plans, HTMLS Application, Org Members
 
 ## Explore SAP BTP Space
+
 ### Deployed Applications, SAP HANA Cloud, Routes, Events, Space Members
 
 ## Create SAP HANA Cloud Instances
