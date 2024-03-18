@@ -463,8 +463,41 @@ From this spcae you can assign people to a space and mention the roles which are
 
 ## Manage SAP HANA Cloud instances (SAP HANA Cloud Central)
 
+To start and stop the SAP HANA Instances or to perform any other action on it, like recovery and stuff
 
-# Create, Build & Deploy 'Full-Stack Fiori Application' using CAP Model & SAP HANA Cloud.
+1. Navigate to the Space in the subaccount and
+2. Click on the SAP HANA Cloud in the navigation and open in SAP HANA Cloud Central
+
+3. Over here select the instance on which you wnat to take action and select the operation which is required like Starting the DB, Stopping the DB. Recovery of the DB and so on
+
+
+![alt text](./Images/HANA-CLOUD-Activity.png)
+
+
+
+# Development of SAP CAP via SAP BAS
+
+SAP CAP Model (Cloud Application Programming)
+
+-   Programming Model for Business Applications on SAP HANA Cloud & SAP BTP
+    
+-   Basic Layers -
+    -   CDS - to define models & services
+    -   Java/ Node.js - to handle custom logic & complex validations
+    -   SAP Fiori - to transmit events or to receive incoming requests
+    -   SAP HANA - HANA Cloud DB artifacts like tables, views, functions
+
+SAP BAS (Business Application Studio) —
+
+-   Development environment available on SAP BTP to create SAP Fiori applitations with CAP model.
+
+
+## How to Launch SAP BAS
+
+
+
+
+
 
 ## Understand CAP Model, Navigate to BAS to create Full-Stack Dev Space
 ## Create & Configure the CAP project 'e_Learning' and Prepare it for Development
