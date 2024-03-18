@@ -419,15 +419,49 @@ It shows security related options at the space levels
 ![alt text](./Images/Security%20Groups.png)
 
 ### Events
+
+Events shows the logs related to the SAP BTP accoutns and applications 
+
+![alt text](./Images/Events.png)
+
+
 ### Space Members
+From this spcae you can assign people to a space and mention the roles which are associated to them.
 
 
-## Create SAP HANA Cloud Instances
 # CONTINUE HERE
+# Create SAP HANA Cloud Instances
 
-### SAP HANA Database Instance and Data Lake Instance
+## SAP HANA Cloud
+1. Fully Managed, in memory data platform
+2. It is the Data management layer of SAP BTP
+3. Important services are SAP HANA Databases, Data Lake 
+4. Fast performance using in memory features and parallel processing 
 
-### Manage SAP HANA Cloud instances (SAP HANA Cloud Central)
+### Two Types SAP HANA Clound Instances
+
+1. SAP HANA Cloud - SAP HANA Databases
+2. SAP HANA Cloud - Data Lake Instance 
+
+
+## How to create SAP HANA Database Instance and Data Lake Instance
+
+1. Navigate to the specific space for which you want to create the DB instances
+2. Click on create
+![alt text](./Images/HANA-CLOUD-1.png)
+
+3. This will launch SAP HANA CLoud 
+4. Login to it and this would give the option to create the cloud instance
+5. Select the type of instance required 
+![alt text](./Images/HANA-CLOUD-2.png)
+6. Provide with the SAP HANA DB details and description
+![alt text](./Images/HANA-CLOUD-3.png)
+7. Finish the setup wizard. This will result in the creation of the HANA DB instances
+![alt text](./Images/HANA-CLOUD-4.png)
+
+
+
+## Manage SAP HANA Cloud instances (SAP HANA Cloud Central)
 
 
 # Create, Build & Deploy 'Full-Stack Fiori Application' using CAP Model & SAP HANA Cloud.
