@@ -234,32 +234,199 @@ Job Scheduling Services
 
 ![alt text](./Images/Job-Schedule.png)
 
-Cloud Foundry
-- Spaces, Quota Plans, Org Members
+### Cloud Foundry
 
-# CONTINUE HERE
-HTML5 Applications
+1. Spaces
 
-Connectivity
-- Destinations, Cloud Connectors
+In Cloud Foundry, "spaces" are logical environments within an organization where applications, services, and other resources are deployed and managed. They provide a way to organize and isolate resources for different purposes such as development, testing, staging, or production.
 
-Security
-- Users, Roles, Role Collections & Trust Configuration 
+Here's a breakdown of the concept:
 
-Entitlements
+1. **Organization**: An organization is a top-level entity within Cloud Foundry that contains spaces. Organizations typically represent different teams, departments, or projects within a larger organization.
 
-### Service Instances & Subscriptions, Service Marketplace
+2. **Space**: A space is a subdivision within an organization where applications, services, and other resources are deployed and managed. Spaces provide isolation and control over resources within the organization. For example, you might have separate spaces for development, testing, staging, and production environments.
 
-### Role Collections, Roles, Users, Destinations, Cloud Connectors
+3. **Isolation**: Each space provides isolation from other spaces within the same organization. This isolation ensures that resources deployed in one space do not interfere with resources in another space. It allows teams to work independently without affecting each other's work.
 
-### CF Spaces & Quota Plans, HTMLS Application, Org Members
+4. **Resource Management**: Spaces allow organizations to manage resources such as applications, services, routes, and permissions within a specific context. This makes it easier to organize and manage resources based on their purpose or lifecycle stage.
+
+Overall, spaces in Cloud Foundry provide a flexible and scalable way to organize and manage resources within an organization, enabling teams to work efficiently and securely in a multi-tenant environment.
+
+2. Quota Plan 
+
+In Cloud Foundry, a "quota plan" refers to a set of limits and constraints imposed on an organization or space to control resource usage. Quota plans are used to manage the allocation of resources such as memory, disk space, routes, and services within Cloud Foundry environments. They help ensure fair usage and prevent any single organization or space from consuming excessive resources, which could impact the overall performance and stability of the platform.
+
+Here are some key aspects of quota plans in Cloud Foundry:
+
+1. **Resource Limits**: Quota plans define limits on various resources such as memory, disk space, the number of routes, and the number of service instances that can be provisioned within an organization or space. These limits help prevent resource over-consumption and ensure that resources are distributed fairly among different users or teams.
+
+2. **Usage Monitoring**: Cloud Foundry continuously monitors resource usage against the defined quota limits. If an organization or space exceeds its quota limits, Cloud Foundry may prevent further resource allocation until usage falls within the specified limits again.
+
+3. **Quota Assignment**: Quota plans can be assigned to organizations or spaces within Cloud Foundry. This allows administrators to tailor resource allocation and usage limits based on the needs of different teams, projects, or departments.
+
+4. **Flexibility**: Cloud Foundry typically provides flexibility in defining quota plans, allowing administrators to customize resource limits based on specific requirements. This flexibility enables organizations to optimize resource allocation according to their unique needs and priorities.
+
+5. **Security and Stability**: By enforcing quota limits, Cloud Foundry enhances security by preventing resource exhaustion attacks and improves platform stability by ensuring that resources are distributed efficiently across different users and applications.
+
+Overall, quota plans play a crucial role in resource management and governance within Cloud Foundry environments, helping organizations maintain control over resource usage while promoting fair and efficient allocation across various teams and projects.
+
+
+3. Org Members
+
+In Cloud Foundry, "org members" refer to users who have been granted access and permissions within an organization. An organization in Cloud Foundry is a top-level entity used to organize and manage spaces, applications, services, and other resources. Org members have various roles and permissions that determine their level of access and what actions they can perform within the organization.
+
+Here's a breakdown of org members in Cloud Foundry:
+
+1. **Roles**: Org members can have different roles within an organization, such as:
+
+   - **Org Manager**: Org managers have full administrative access within the organization. They can manage spaces, applications, services, and other resources. They can also add or remove org members, create spaces, manage quotas, and perform other administrative tasks.
+   
+   - **Space Developer**: Space developers have permissions to manage applications and services within a specific space. They can push new applications, bind services, and perform other development-related tasks within their assigned spaces.
+   
+   - **Space Manager**: Space managers have permissions similar to space developers, but they can also manage other aspects of the space, such as managing routes, service instances, and user roles within the space.
+   
+   - **Org Auditor**: Org auditors have read-only access to the organization. They can view resources and activity within the organization but cannot make any changes.
+   
+2. **Permissions**: Depending on their roles, org members have different permissions to perform actions such as creating, updating, or deleting resources within the organization. These permissions help enforce security and control over the organization's resources.
+
+3. **Collaboration**: Org members collaborate within the organization to develop, deploy, and manage applications and services. They work together in spaces to develop and test applications, share resources, and collaborate on projects.
+
+4. **Access Control**: Org managers have the ability to manage org memberships, granting or revoking access to users as needed. This allows organizations to control who can access their resources and ensures that only authorized users have access to sensitive data and applications.
+
+Overall, org members play a vital role in the collaborative development and management of applications and services within Cloud Foundry organizations. They are assigned roles and permissions that govern their access to resources and determine their level of involvement in organizational activities.
+
+### HTML5 Applications
+
+In the SAP Business Technology Platform (BTP) Cockpit, HTML5 applications refer to web applications developed using HTML, CSS, and JavaScript technologies. These applications are typically designed to run in web browsers and can be used to build various types of user interfaces and interactive experiences.
+
+HTML5 applications in the BTP Cockpit are part of the larger landscape of application development and deployment capabilities provided by SAP. Here's how HTML5 applications fit into the BTP ecosystem:
+
+1. **Development Environment**: BTP provides tools and services for developing HTML5 applications. Developers can use SAP Web IDE or other integrated development environments (IDEs) to create and edit HTML5 code, CSS stylesheets, and JavaScript logic.
+
+2. **Deployment Options**: Once developed, HTML5 applications can be deployed and hosted on the SAP Cloud Platform, which is a core component of the SAP BTP. The Cloud Foundry environment within SAP Cloud Platform supports the deployment and scaling of HTML5 applications, allowing them to be accessed by users over the internet.
+
+3. **Integration Capabilities**: HTML5 applications developed within the BTP ecosystem can integrate with other SAP and non-SAP services and systems. This includes accessing data from SAP S/4HANA, SAP SuccessFactors, SAP Business Warehouse, or any other system accessible through APIs.
+
+4. **User Interface and Experience**: HTML5 applications are versatile and can be used to build various types of user interfaces, ranging from simple web forms to complex dashboards and analytics tools. They can incorporate responsive design principles to ensure optimal display on different devices and screen sizes.
+
+5. **Security and Authentication**: BTP provides security features and authentication mechanisms to protect HTML5 applications and the data they interact with. This includes support for single sign-on (SSO), role-based access control, and encryption of sensitive data.
+
+In summary, HTML5 applications in the BTP Cockpit represent a key aspect of application development and deployment, offering developers the flexibility to create modern web applications that can leverage SAP's cloud infrastructure and services.
+
+### Connectivity
+The Connectivity tab in the BTP Cockpit typically provides tools and features related to managing connectivity options for applications and services deployed on the SAP BTP.
+
+### Destinations
+Destinations: Destinations are configuration settings that define how applications deployed on the SAP BTP can connect to remote systems or services. These destinations can include URLs, credentials, and other parameters necessary for establishing connections. The Connectivity tab may provide an interface for creating, editing, and managing destinations.
+
+### Cloud Connectors
+
+Cloud Connectors are used to securely connect applications deployed on the SAP BTP to on-premises systems. They act as a bridge between the cloud environment and the on-premises systems, enabling seamless integration without exposing internal systems to the internet. The Connectivity tab may offer features for managing and monitoring cloud connectors.
+
+### Security
+
+#### Users
+This tab shows all the users that are associated to the particular sub-account
+
+#### Roles
+
+Roles are a set of access controls that are provided to a user to be able to give certain access to them
+
+#### Role Collections 
+
+Role collections is a set of roles bunched together to make the role assignment easier for the admin
+
+
+Here are a list of role collections which are available while adding a role collection to the user in any particular sub account:
+
+1. Connector Administrator	- Operate the data transmission tunnels used by the Cloud Connector.	
+
+2. Connectivity and Destination Administrator - Operate the data transmission tunnels used by the Cloud Connector and manage the destination configurations, certificates and subaccount trust.	
+
+3. Destination Administrator - Manage the destination configurations, certificates and subaccount trust.	
+4. Subaccount Administrator - Administrative access to the subaccount	
+5. Subaccount Service Administrator - Administrative access to service brokers and environments on a subaccount level.	
+6. Subaccount Viewer - Read-only access to the subaccount	
+
+
+#### Trust Configuration 
+![alt text](./Images/Entitlements.png)
+
+Link to more details - https://help.sap.com/docs/btp/sap-business-technology-platform/trust-and-federation-with-identity-providers
+
+
+#### Entitlements
+
+In SAP Business Technology Platform (BTP), entitlements at the subaccount level refer to permissions or rights granted to a specific subaccount within the SAP BTP environment. A subaccount is a logical container within SAP BTP that can represent a department, project, or other organizational unit. Entitlements at the subaccount level govern access to services, resources, and functionalities within that specific subaccount.
+
+Here are some key aspects of entitlements at the subaccount level:
+
+1. **Service Access**: Entitlements determine which services and products are available for consumption within a particular subaccount. This includes platform services such as databases, application runtimes, integration services, analytics tools, and more.
+
+2. **Quotas and Limits**: Entitlements may include quotas or limits on the usage of services and resources within the subaccount. These quotas specify the maximum amount of resources (such as memory, storage, or API calls) that can be consumed by applications or services deployed within the subaccount.
+
+3. **Service Plans and Tiers**: Entitlements at the subaccount level may provide access to different service plans or tiers offered by SAP BTP. These plans can vary in terms of features, performance, and pricing. Users or applications within the subaccount may be entitled to specific service plans based on their requirements and entitlements.
+
+4. **Access Control**: Entitlements control access to services and resources within the subaccount, ensuring that only authorized users or applications can utilize them. Access control mechanisms such as role-based access control (RBAC) or identity and access management (IAM) may be used to enforce security and compliance policies.
+
+5. **License Management**: Entitlements at the subaccount level may be tied to software licenses or usage rights. License management ensures compliance with licensing agreements and helps organizations optimize their software usage and costs within each subaccount.
+
+6. **Integration with Billing and Cost Management**: Entitlements at the subaccount level may be linked to billing and cost management features within SAP BTP. They help track resource usage, calculate costs, and manage billing for services consumed within each subaccount.
+
+Overall, entitlements at the subaccount level provide granular control over access to services, resources, and functionalities within SAP BTP, allowing organizations to tailor permissions and manage usage based on the needs of specific departments, projects, or other organizational units.
+
+![alt text](./Images/Subaccout-Entitlements.png)
 
 ## Explore SAP BTP Space
 
-### Deployed Applications, SAP HANA Cloud, Routes, Events, Space Members
+In short, SAP BTP spaces are logical partitions within an organization where applications, services, and resources are deployed and managed. They provide isolation, resource management, collaboration, and access control within the SAP BTP environment, allowing teams to work independently and efficiently.
+
+### Deployed Applications
+![alt text](./Images/Spaces%20in%20BTP.png)
+
+All the deployed applications via the CAP model from Bussiness Application Studio will be availabel here as applications in the space. 
+
+
+Example of application in a space
+
+![alt text](./Images/Application%20in%20Space.png)
+
+
+
+### SAP HANA Cloud
+
+Using this option at the application level within a space it is possible to create a SAP HANA Cloud instance
+
+Here you can either create a 
+1. SAP HANA Database
+2. Data Lake
+
+Example of SAP HANA Cloud Instance in 
+
+![alt text](./Images/SAP-HANA-CLOUD.png)
+
+### Routes
+
+Basically, routes are the URLs that enable your end users to reach your application , this route section is not available under the Subaccount, so this is available only at the space level. So in order to manage the routes, we have to come under the space level and this section maintains the list of the mapped applications.
+
+![alt text](./Images/SAP-Routes.png)
+
+
+### Security Groups
+
+It shows security related options at the space levels
+
+![alt text](./Images/Security%20Groups.png)
+
+### Events
+### Space Members
+
 
 ## Create SAP HANA Cloud Instances
+# CONTINUE HERE
+
 ### SAP HANA Database Instance and Data Lake Instance
+
 ### Manage SAP HANA Cloud instances (SAP HANA Cloud Central)
 
 
