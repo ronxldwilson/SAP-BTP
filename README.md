@@ -538,35 +538,135 @@ SAP BAS (Business Application Studio) —
 
 ## How to Launch SAP BAS
 
+Navigate to the SAP BTP trail account and click on the SAP BAS
 
+![alt text](./Images/SAP-BAS-Launch.png)
 
+This will launch the SAP BAS Applicaiton:
+![alt text](./Images/SAP-BAS-App.png)
 
 
 
 ## Understand CAP Model, Navigate to BAS to create Full-Stack Dev Space
+
+In the below click on Full Stack application and give a name to the dev space
+
+Add the extensions as per requirement
+![alt text](./Images/SAP-BAS-App.png)
+
+Then launch it, this will launch the dev space for you
+
+![alt text](./Images/DevSpace.png)
+
+
 ## Create & Configure the CAP project 'e_Learning' and Prepare it for Development
 
+Make sure that the cloud foundry is connected before starting the project. The option to see that is the last icon on the left side.
+
+![alt text](./Images/BAS-CAP-Project.png)
+
+Once you start the CAP Project along with additional services like CI/CD pipelines and others, you will be guided to editor
+
 ## Understand important files of CAP Project – MTA, Package.json, Package-lock.json
+
+A Multi-Target Application (MTA) is comprised of multiple
+parts (modules), created with different technologies and
+deployed to different targets, but with a single, common
+lifecycle.
+
+SAP is generally based on a three tier architecture
+• 3-Tier Architecture -
+> Front-end, Application and Database.
+
+In SAP BTP we have the an application based as a combination of app and varius services
+
+• Full stack Application (CAPM) —
+> Combination of multiple applications and service instances.
+
+In SAP Business Technology Platform (BTP), a Multi-Target Application (MTA) is a concept used to define and manage the deployment of complex, multi-tier applications consisting of multiple modules or components. These modules can be written in different programming languages and can have dependencies on each other.
+
+MTAs are defined using the Multi-Target Application Descriptor (MTA.yaml), which describes the structure of the application, including its modules, dependencies, and deployment configuration.
+
+Key features and benefits of Multi-Target Applications in SAP BTP include:
+
+1. **Modularity**: MTAs allow applications to be broken down into smaller, manageable modules, each serving a specific function or capability. This modular approach promotes reusability and simplifies development and maintenance.
+
+2. **Dependency Management**: MTAs support defining dependencies between modules, allowing you to specify the order in which they should be deployed and ensuring that all required resources are available.
+
+3. **Scalability**: MTAs enable the horizontal scaling of applications by deploying multiple instances of individual modules based on demand. This helps ensure optimal performance and resource utilization.
+
+4. **Flexibility**: MTAs support deploying applications to different environments (e.g., development, testing, production) with minimal effort, thanks to their configurable deployment settings.
+
+5. **Versioning and Rollback**: MTAs support versioning, allowing you to manage different versions of your application and rollback to previous versions if needed.
+
+6. **Centralized Management**: MTAs can be managed centrally using tools provided by SAP BTP, making it easier to monitor, update, and troubleshoot applications across different environments.
+
+Overall, Multi-Target Applications in SAP BTP provide a powerful framework for building, deploying, and managing complex applications in a cloud-native environment, helping organizations streamline their development processes and deliver innovative solutions more efficiently.
+
+
+![alt text](./Images/MTA.png)
+
+![alt text](./Images/MTA2.png)
+
+
+#### MTA Development Descriptor File mta.yaml
+These are the different parts of it.
+
+Global Elements
+- Include the application identifier and version, a description (optional), copyrights, author, and so on.
+
+Modules
+- Modules created in the application, such as the SAP HANA database module and the Node.js module
+
+Resources
+- Dependent services that are not provided by the application
+
+Properties
+- These can be specified when the value has to be determined during the deployment
+
+Parameters
+- Reserved variables of a module, which can be accessed by other modules
+
 ## Create HANA Database Service Instance & Binding CAP Project to it
+
 ## Create Database(DB) Entities & Service Interfaces, Generate design-time DB artifacts
+
 ## Deploy design-time DB artifacts to HANA Cloud Database
+
 ## Explore SAP HANA DB Explorer & Load data into HANA Cloud DB tables
+
 ## Test CAP Service Entities locally by binding CAP project to DB service instance
+
 ## Create Fiori App List Report, Test it locally, Build & Deploy Fiori App & Test it in BTP (HTML5 App)
+
 ## Introduction to Approuter & XSUAA, Configure Approuter & Adding XSUAA Configuration
+
 ## Add Authorization to Application, Understand Authentication Vs Authorization
+
 ## Create Roles for Application, Generate Roles in xs-security file & Test it's impact on App
+
 ## Create Role Collection and assign Roles & Users to it.
+
 ## Introduction to POSTMAN & Configuration
+
 ## Working with POSTMAN to test Fiori Application (CRUD operations).
 
 # Create SAP Fiori Application using
+
 ## Fiori Annotations
+
 ## Create & Configure the CAP project 'Fashion_Shop' and Prepare it for Development
+
 ## Create CDS View entity & use of syntax like Concatenation, Case etc...
+
 ## Create Service entity on tables & view; test the CAP services locally
+
 ## Add SAP Fiori Annotations to CAP project to create List Report Fiori Application
+
 ## Working on item detail page for List Report using annotations
+
 ## Enable OData Draft to perform Edit & Create operations & Explore Draft Tables
+
 ## Test Fiori Application locally to perform CRUD operations
+
 ## Create 'Value Help' & understand concepts like redirection target
