@@ -1,6 +1,50 @@
 # SAP-BTP-Notes
 
-This Repository contains notes on SAP BTP and important pointers 
+This Repository contains notes on SAP BTP and important pointers. Feel free to contribute to this repository by corrections or other important details that are missed.
+
+# Index
+1. [Introduction SAP BTP](#intrduction-to-sap-btp)
+    -   [SAP BTP Introduction](#sap-btp-introduction)
+        -   [Cloud Technology and Need of Clouf Platforms](#cloud-technology--need-of-cloud-platform)
+        -   [Offerings of SAP BTP](#offerings-of-sap-btp)
+        -   [Use Cases of SAP BTP](#use-cases-of-sap-btp)
+        -   [Advantages of SAP BTP](#advantages-of-sap-btp)
+        -   [Services of SAP BTP](#services-of-sap-btp)
+        -   [Commercial Models of SAP BTP](#commercial-models-of-sap-btp)
+2. [SAP BTP Account Practicals](#sap-btp-account-practicals)
+    -   [Create SAP BTP Trial Accounts](#create-sap-btp-trial-account)
+        -   [Explore SAP BTP Account](#explore-sap-btp-cockpit)
+    -   [Explore SAP BTP Subaccount](#explore-sap-btp-subaccount)
+        -   [Overview](#overview)
+        -   [Cloud Foundry](#cloud-foundry)
+        -   [Kyma Environment](#kyma-environment)
+        -   [Spaces in Subaccount](#spaces-in-subaccount)
+        -   [Services and Service Marketplace](#services---service-marketplace-instances--subscriptions)
+        -   [Cloud Foundry ](#cloud-foundry-1)
+        -   [HTML5 Applications](#html5-applications)
+        -   [Connectivity](#connectivity)
+        -   [Destinations](#destinations)
+        -   [Cloud Connectors](#cloud-connectors)
+        -   [Security](#security)   
+            -   [Users](#users)   
+            -   [Roles](#roles)
+            -   [Roles Collecitons](#role-collections)
+            -   [Trust Configuration](#trust-configuration)
+            -   [Entitlements](#entitlements)
+    -   [Explore SAP BTP Space](#explore-sap-btp-space)
+        -   [Deployed Applications](#deployed-applications)
+        -   [SAP HANA Cloud](#sap-hana-cloud)
+        -   [Routes](#routes)     
+        -   [Security Group](#security-groups)
+        -   [Events](#events)
+        -   [Space Members](#space-members)
+3. [Create SAP HANA Cloud Instances](#create-sap-hana-cloud-instances)
+    -   [SAP HANA Cloud](#sap-hana-cloud-1)
+        -   [Two Types of SAP HANA Cloud Instances](#two-types-sap-hana-clound-instances)
+    -   [How To Create SAP HANA Databases Instance and Data lake instance](#how-to-create-sap-hana-database-instance-and-data-lake-instance)
+    -   [Manage SAP HANA Cloud Instances via SAP HANA Cloud Central](#manage-sap-hana-cloud-instances-sap-hana-cloud-central)
+4. 
+5.
 
 # Intrduction to SAP BTP
 
@@ -429,7 +473,6 @@ Events shows the logs related to the SAP BTP accoutns and applications
 From this spcae you can assign people to a space and mention the roles which are associated to them.
 
 
-# CONTINUE HERE
 # Create SAP HANA Cloud Instances
 
 ## SAP HANA Cloud
@@ -474,6 +517,7 @@ To start and stop the SAP HANA Instances or to perform any other action on it, l
 ![alt text](./Images/HANA-CLOUD-Activity.png)
 
 
+# CONTINUE HERE
 
 # Development of SAP CAP via SAP BAS
 
