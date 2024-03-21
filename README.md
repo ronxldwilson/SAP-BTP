@@ -620,48 +620,197 @@ Modules
 
 Resources
 - Dependent services that are not provided by the application
+- A resource is something that is required by a module of the MTA at runtime, or at deployment time but not provided inside the MTA
 
 Properties
 - These can be specified when the value has to be determined during the deployment
 
 Parameters
 - Reserved variables of a module, which can be accessed by other modules
+- They affect the behaviour of the application during deployment process and during runtime.
+
+Example MTA.yaml File
+
+```yaml
+_schema-version: '3.1'
+ID: Learning
+version: 1.0.0
+description: "A simple CAP project."
+parameters:
+  enable-parallel-deployments: true
+build-parameters:
+  before-all:
+    - builder: custom
+      commands:
+        - npm ci
+        - npx cds build --production
+modules:
+  - name: Learning-srv
+    type: nodejs
+    path: gen/srv
+    parameters:
+      buildpack: nodejs_buildpack
+    build-parameters:
+      builder: npm
+    provides:
+      - name: srv-api # required by consumers of CAP services (e.g. approuter)
+        properties:
+          srv-url: ${default-url}
+    requires:
+      - name: Learning-db
+
+  - name: Learning-db-deployer
+    type: hdb
+    path: gen/db
+    parameters:
+      buildpack: nodejs_buildpack
+    requires:
+      - name: Learning-db
+
+resources:
+  - name: Learning-db
+    type: com.sap.xs.hdi-container
+    parameters:
+      service: hana
+      service-plan: hdi-shared
+
+
+```
+
+
+
+### Package.JSON
+
+- Package.json file generated during CAP project creation
+- Required for the configuration of CAP MTA project
+- Versioning file used to install multiple packages in project
+- Shared by all the three modules i.e. db, srv & app
+- Used to describe build, deployment & runtime dependencies of application.
+
+
+
+
+```JSON
+
+{
+  "name": "Learning",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap/cds": "^7",
+    "express": "^4",
+    "@sap/cds-hana": "^2"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^1",
+    "@sap/cds-dk": "^7"
+  },
+  "scripts": {
+    "start": "cds-serve"
+  },
+  "cds": {
+    "requires": {
+      "db": "hana"
+    }
+  }
+}
+
+
+```
+
+
+- Name - Name of the application
+- Private - Access to the package specified in the name is restricted or not. Private packages are not published by npm
+- Dependencies - List of Dependencies applied to the application
+- Scripts - Command used to start the application along with any additional options & parameters if required.
+
+
+### Package-lock.json File
+
+- Generated on initializing the node application
+- Generated on initializing the node application.
+- Used for locking the dependency with installed version. It will install exact latest version of that package.
+	Example - If current version = 3.2.1 then it will save the version with
+	(^) sign i.e. it will support any higher version with major version 3
+- Without package-lock.json, there might be some difficulties in installed versions in different environments.
+
+
+## What is CDS in BTP
+
+In SAP BTP (Business Technology Platform), SAP CDS (Core Data Services) refers to a modeling technique used for defining and consuming semantically rich data models in SAP applications. SAP CDS is part of the SAP Cloud Platform, allowing developers to define data models and services in a language that is both expressive and easy to understand.
+
+Here's a breakdown of some key aspects of SAP CDS within SAP BTP:
+
+1. **Modeling Language**: SAP CDS provides a declarative way to define data models using a specialized language. This language allows developers to define entities, associations, annotations, and constraints.
+
+2. **Semantic Enrichment**: With SAP CDS, developers can enrich their data models with semantic annotations, providing additional meaning and context to the data. This semantic enrichment helps in better understanding and consuming data across different applications and services.
+
+3. **Integration with SAP Applications**: SAP CDS models can be seamlessly integrated with various SAP applications and services within SAP BTP. This integration facilitates data sharing and consistency across different SAP systems and modules.
+
+4. **Compatibility**: SAP CDS models are compatible with various SAP technologies and tools, such as SAP HANA, SAP Fiori, SAP S/4HANA, and more. This compatibility ensures that data models defined using SAP CDS can be easily consumed and utilized across different SAP platforms and applications.
+
+5. **Performance Optimization**: SAP CDS also includes features for optimizing data access and query performance. By leveraging capabilities such as data projections, aggregations, and indices, developers can design efficient data models that meet the performance requirements of their applications.
+
+Overall, SAP CDS plays a crucial role in simplifying data modeling and consumption within SAP BTP, enabling developers to create robust and interoperable applications and services.
 
 ## Create HANA Database Service Instance & Binding CAP Project to it
 
+
+
 ## Create Database(DB) Entities & Service Interfaces, Generate design-time DB artifacts
+
 
 ## Deploy design-time DB artifacts to HANA Cloud Database
 
+
 ## Explore SAP HANA DB Explorer & Load data into HANA Cloud DB tables
+
 
 ## Test CAP Service Entities locally by binding CAP project to DB service instance
 
+
 ## Create Fiori App List Report, Test it locally, Build & Deploy Fiori App & Test it in BTP (HTML5 App)
+
 
 ## Introduction to Approuter & XSUAA, Configure Approuter & Adding XSUAA Configuration
 
+
 ## Add Authorization to Application, Understand Authentication Vs Authorization
+
 
 ## Create Roles for Application, Generate Roles in xs-security file & Test it's impact on App
 
+
 ## Create Role Collection and assign Roles & Users to it.
+
+
 
 ## Introduction to POSTMAN & Configuration
 
+
 ## Working with POSTMAN to test Fiori Application (CRUD operations).
+
 
 # Create SAP Fiori Application using
 
+
 ## Fiori Annotations
+
 
 ## Create & Configure the CAP project 'Fashion_Shop' and Prepare it for Development
 
+
 ## Create CDS View entity & use of syntax like Concatenation, Case etc...
+
 
 ## Create Service entity on tables & view; test the CAP services locally
 
+
 ## Add SAP Fiori Annotations to CAP project to create List Report Fiori Application
+
 
 ## Working on item detail page for List Report using annotations
 
